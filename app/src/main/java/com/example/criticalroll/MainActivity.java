@@ -2,6 +2,7 @@ package com.example.criticalroll;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,10 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private Random rng = new Random();
     private TextView message;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final MediaPlayer roll = MediaPlayer.create(this, R.raw.roll);
+        final MediaPlayer derekawe = MediaPlayer.create(this, R.raw.derekawe);
+        final MediaPlayer maxiumumderek = MediaPlayer.create(this, R.raw.maximumderek);
 
         message = (TextView) findViewById(R.id.message);
         imageViewDice = findViewById(R.id.image_view_dice);
@@ -25,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rollDice();
+                roll.start();
+                if(case = 1) {
+                    derekawe.start();
+                }
+                if(case = 20) {
+                    maxiumumderek.start();
+                }
             }
         });
     }

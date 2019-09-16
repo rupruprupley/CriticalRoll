@@ -31,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 rollDice();
                 roll.start();
-                if(case = 1) {
-                    derekawe.start();
-                }
-                if(case = 20) {
-                    maxiumumderek.start();
-                }
             }
         });
     }
